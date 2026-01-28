@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Fantasy RPG Name Generator</title>
+</head>
+<body>
+
+  <h2>Fantasy RPG Name Generator</h2>
+
+  <button onclick="generateName()">Generate Name</button>
+
+  <p id="name"></p>
+
+  <script>
+    var names = [
+      "BORAK",
+      "GRIMLOK",
+      "GRONDAL"
+    ];
+
+    function generateName() {
+      var random = Math.floor(Math.random() * names.length);
+      document.getElementById("name").innerText = names[random];
+    }
+  </script>
+
+</body>
+</html>
