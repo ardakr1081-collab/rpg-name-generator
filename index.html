@@ -7,7 +7,7 @@
 </head>
 <body>
   <h2>Fantasy RPG Name Generator</h2>
-
+<p>Create lore-friendly names for D&D characters in seconds.</p>
   <button onclick="generateName()">Generate Name</button>
   <p id="name"></p>
 
@@ -23,10 +23,10 @@
     function generateName() {
       if (clickCount >= MAX_FREE) {
         document.getElementById("name").innerHTML = `
-          <strong>Free limit reached.</strong><br><br>
+          <strong>Free limit reached. Unlock unlimited, lore-friendly RPG names instantly..</strong><br><br>
           <a href="https://www.shopier.com/GeNaRaToR/43717054" target="_blank"
              style="display:inline-block;padding:10px 16px;background:#000;color:#fff;text-decoration:none;border-radius:6px;">
-            Unlock Unlimited Names
+            Unlock Unlimited RPG Names
           </a>
         `;
         return;
