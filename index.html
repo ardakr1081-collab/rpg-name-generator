@@ -1,73 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Fantasy RPG Name Generator</title>
 </head>
 <body>
-
   <h2>Fantasy RPG Name Generator</h2>
 
   <button onclick="generateName()">Generate Name</button>
-
   <p id="name"></p>
-let clickCount = 0;
-const MAX_FREE = 3;
+
   <script>
+    let clickCount = 0;
+    const MAX_FREE = 3;
+
     const names = [
-  "Arvion",
-  "Kaelthor",
-  "Zymera",
-  "Noxen",
-  "Valira",
-  "Drath",
-  "Eryndor",
-  "Malvek",
-  "Thalara",
-  "Vornix",
-  "Aelric",
-  "Nyxara",
-  "Kaldor",
-  "Zerith",
-  "Luneth",
-  "Ravok",
-  "Elmyra",
-  "Torvex",
-  "Iskand",
-  "Faelor"
-];
+      "Arkon","Kaelthar","Zymera","Noxen","Valira",
+      "Drath","Eryndor","Malvek","Thalara","Vornik"
+    ];
 
+    function generateName() {
+      if (clickCount >= MAX_FREE) {
+        document.getElementById("name").innerHTML = `
+          <strong>Free limit reached.</strong><br><br>
+          <a href="https://www.shopier.com/GeNaRaToR/43717054" target="_blank"
+             style="display:inline-block;padding:10px 16px;background:#000;color:#fff;text-decoration:none;border-radius:6px;">
+            Unlock Unlimited Names
+          </a>
+        `;
+        return;
+      }
 
-    <script>
-let clickCount = 0;
-const MAX_FREE = 3;
-
-const names = [
-  "Arkon", "Kaelthar", "Zymera", "Noxen", "Valira",
-  "Drath", "Eryndor", "Malvek", "Thalara", "Vornik"
-];
-
-function generateName() {
-  if (clickCount >= MAX_FREE) {
-    document.getElementById("name").innerHTML = `
-      <strong>Free limit reached.</strong><br><br>
-      <a href="https://www.shopier.com/GeNaRaToR/43717054" target="_blank"
-         style="display:inline-block;padding:10px 16px;background:#000;color:#fff;text-decoration:none;border-radius:6px;">
-        Unlock Unlimited Names
-      </a>
-    `;
-    return;
-  }
-
-  const randomIndex = Math.floor(Math.random() * names.length);
-  document.getElementById("name").innerText = names[randomIndex];
-  clickCount++;
-}
-</script>
-      var random = Math.floor(Math.random() * names.length);
-      document.getElementById("name").innerText = names[random];
+      const randomIndex = Math.floor(Math.random() * names.length);
+      document.getElementById("name").innerText = names[randomIndex];
+      clickCount++;
     }
   </script>
-
 </body>
 </html>
